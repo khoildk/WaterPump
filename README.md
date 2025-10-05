@@ -1,17 +1,17 @@
 # L298N Driver For STM32 
--This project is part of a smart irrigation system using the STM32F103C8T6 microcontroller.  
--It controls a mini water pump through the L298N motor driver (or MOSFET module) and can later be integrated with soil moisture and temperature sensors.  
--The goal is to automatically water plants based on environmental conditions.
+- This project is part of a smart irrigation system using the STM32F103C8T6 microcontroller.  
+- It controls a mini water pump through the L298N motor driver (or MOSFET module) and can later be integrated with soil moisture and temperature sensors.  
+- The goal is to automatically water plants based on environmental conditions.
 # Features 
--Modular library for easy pump control (pump.h / pump.c)  
--Compatible with STM32CubeIDE and HAL libraries  
--Ready for future integration with sensors and IoT modules
+- Modular library for easy pump control (pump.h / pump.c)  
+- Compatible with STM32CubeIDE and HAL libraries  
+- Ready for future integration with sensors and IoT modules
 # Prerequisites
--STM32 microcontroller (any series with SPI support)  
--L298N Module  
--STM32 development environment (STM32CubeIDE, Keil, etc.)  
--C compiler and toolchain  
--ST Link V2 
+- STM32 microcontroller (any series with SPI support)  
+- L298N Module  
+- STM32 development environment (STM32CubeIDE, Keil, etc.)  
+- C compiler and toolchain  
+- ST Link V2 
 # Hardware Connections
 | Component                   | STM32 Pin                  | Description              |
 | --------------------------- | -------------------------- | ------------------------ |
