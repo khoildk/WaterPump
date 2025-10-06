@@ -3,7 +3,6 @@
 - It controls a 5V relay module that switches a water pump on and off automatically (or manually with a button).
 # Features 
 - Control a 5V relay using STM32 GPIO.  
-- Manual control via button input (press once → ON, press again → OFF).  
 - Modular code with custom library (relay.h / relay.c) for easy reuse.  
 - Can be extended to work with soil moisture, temperature, and humidity sensors.
 # Prerequisites
