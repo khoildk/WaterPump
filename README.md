@@ -1,11 +1,11 @@
 # Relay Driver For STM32 
--This project is part of a Smart Plant Watering System, built using an STM32F103C8T6 microcontroller.  
--It controls a 5V relay module that switches a water pump on and off automatically (or manually with a button).
+- This project is part of a Smart Plant Watering System, built using an STM32F103C8T6 microcontroller.  
+- It controls a 5V relay module that switches a water pump on and off automatically (or manually with a button).
 # Features 
--Control a 5V relay using STM32 GPIO.  
--Manual control via button input (press once → ON, press again → OFF).  
--Modular code with custom library (relay.h / relay.c) for easy reuse.  
--Can be extended to work with soil moisture, temperature, and humidity sensors.
+- Control a 5V relay using STM32 GPIO.  
+- Manual control via button input (press once → ON, press again → OFF).  
+- Modular code with custom library (relay.h / relay.c) for easy reuse.  
+- Can be extended to work with soil moisture, temperature, and humidity sensors.
 # Prerequisites
 - STM32 microcontroller (any series with SPI support)  
 - Relay 5V  
@@ -23,8 +23,8 @@
 | **Pump (-)**    | **External Power GND**             | Same ground as relay DC(-)        |
 | **STM32 GND**   | **External Power GND**             | Must be connected together        |
 # Libraries Files
--Relay.h — Header file containing function declarations for relay control.  
--Relay.c — Source file implementing initialization and control logic (ON, OFF)
+- Relay.h — Header file containing function declarations for relay control.  
+- Relay.c — Source file implementing initialization and control logic (ON, OFF)
 # Notes
 - Make sure all grounds (STM32, Relay, Pump Power) are connected together.
 
