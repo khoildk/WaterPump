@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "relay.h"
+Relay_HandleTypeDef relay1;
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -92,15 +93,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  Relay_Init(GPIOA, GPIO_PIN_1);
+  Relay_Init(&relay1, GPIOA, GPIO_PIN_5);
   while (1)
   {
-	    Relay_On();
-	    HAL_Delay(10000);
-
-	    Relay_Off();
-	    HAL_Delay(3000);
-	  }
+	  Relay_On(&relay1);
+	      HAL_Delay(10000);
+	      Relay_Off(&relay1);
+	      HAL_Delay(3000);
+  }
 
 }
 
@@ -157,10 +157,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PA1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1;
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
