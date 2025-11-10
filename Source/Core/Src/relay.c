@@ -1,20 +1,21 @@
 #include "relay.h"
 
-#define RELAY_PORT GPIOA
-#define RELAY_PIN  GPIO_PIN_1  // thay bằng chân bạn dùng để điều khiển relay
-
-void Relay_Init(void)
+void Relay_Init(Relay_HandleTypeDef *hrelay, GPIO_TypeDef *GPIOx, uint16_t Pin)
 {
-    HAL_GPIO_WritePin(RELAY_PORT, RELAY_PIN, GPIO_PIN_RESET);
+    hrelay->GPIOx = GPIOx;
+    hrelay->Pin = Pin;
+
+    // Đặt relay OFF mặc định
+    HAL_GPIO_WritePin(hrelay->GPIOx, hrelay->Pin, GPIO_PIN_RESET);
 }
 
-void Relay_On(void)
+void Relay_On(Relay_HandleTypeDef *hrelay)
 {
-    HAL_GPIO_WritePin(RELAY_PORT, RELAY_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(hrelay->GPIOx, hrelay->Pin, GPIO_PIN_SET);
 }
 
-void Relay_Off(void)
+void Relay_Off(Relay_HandleTypeDef *hrelay)
 {
-    HAL_GPIO_WritePin(RELAY_PORT, RELAY_PIN, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(hrelay->GPIOx, hrelay->Pin, GPIO_PIN_RESET);
 }
 
